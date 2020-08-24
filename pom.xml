@@ -21,6 +21,7 @@
         <module>SpringcloudEureka</module>
         <module>SpringProviderTem</module>
         <module>SpringCloudProviderUser</module>
+        <module>HysitrixBoard</module>
     </modules>
 
     <properties>
