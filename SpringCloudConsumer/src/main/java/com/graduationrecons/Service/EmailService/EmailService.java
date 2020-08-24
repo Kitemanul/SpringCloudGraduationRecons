@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-CELLER")
 public interface EmailService {
 
      @RequestMapping(value = "/SendEmail")

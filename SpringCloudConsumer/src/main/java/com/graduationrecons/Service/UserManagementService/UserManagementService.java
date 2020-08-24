@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-USER")
 public interface UserManagementService {
 
     @RequestMapping(value = "/getUser")

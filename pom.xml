@@ -19,6 +19,8 @@
         <module>SpringCloudProvider</module>
         <module>SpringCloudConsumer</module>
         <module>SpringcloudEureka</module>
+        <module>SpringProviderTem</module>
+        <module>SpringCloudProviderUser</module>
     </modules>
 
     <properties>

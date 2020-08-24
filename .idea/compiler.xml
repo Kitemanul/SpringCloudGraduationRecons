@@ -10,6 +10,8 @@
         <module name="SpringCloudConsumer" />
         <module name="SpringcloudEureka" />
         <module name="SpringCloudProvider" />
+        <module name="SpringCloudProviderUser" />
+        <module name="SpringProviderTem" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

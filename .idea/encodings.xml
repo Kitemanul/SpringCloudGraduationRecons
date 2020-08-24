@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringCloudConsumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringCloudProvider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringCloudProviderUser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringProviderTem" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringcloudEureka" charset="UTF-8" />
   </component>
 </project>

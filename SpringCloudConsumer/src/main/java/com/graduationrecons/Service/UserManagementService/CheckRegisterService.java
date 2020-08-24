@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-USER")
 public interface CheckRegisterService {
 
     @RequestMapping(value = "/CheckUser")

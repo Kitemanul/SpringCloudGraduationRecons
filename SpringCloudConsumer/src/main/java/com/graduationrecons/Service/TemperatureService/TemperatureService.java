@@ -12,7 +12,7 @@ import java.util.List;
 
 
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-Tem")
 public interface TemperatureService {
 
     @RequestMapping(value = "/SearchTem")

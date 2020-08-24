@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-CELLER")
 public interface UserService {
 
     @RequestMapping(value = "/getLoginUser", method= RequestMethod.GET)
