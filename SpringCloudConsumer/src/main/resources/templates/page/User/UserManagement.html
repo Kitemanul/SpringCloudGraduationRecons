@@ -1,0 +1,85 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorator="layout/Main">
+<head>
+
+  <!--<script th:src="@{/plugins/jquery/jquery.min.js}"></script>-->
+
+  <script type="text/javascript" th:src="@{/js/jQuery-3.4.1.js}"></script>
+  <link rel="stylesheet" th:href="@{/fontawesome-free/css/all.min.css}">
+  <link rel="stylesheet" th:href="@{https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css}">
+  <link rel="stylesheet" th:href="@{/css/bootstrap-datepicker3.min.css}"></link>
+
+
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/js/adminlte.min.js}"></script>
+  <script th:src="@{/js/demo.js}"></script>
+
+  <!-- datatable -->
+
+  <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+  <script type="text/javascript" th:src="@{/datatable/js/dataTables.bootstrap.min.js}"></script>
+  <script type="text/javascript" th:src="@{/datatable/js/dataTasbles.bootstrap4.min.js}"></script>
+  <link rel="stylesheet" th:href="@{/datatable/css/datatables.css}">
+  <script type="text/javascript" th:src="@{/datatable/js/jquery.dataTables.min.js}"></script>
+  <!-- page script -->
+  <script th:src="@{/js/page/UserManagement.js}"></script>
+
+  <link rel="stylesheet" th:href="@{/css/adminlte.min.css}">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+</head>
+
+
+<!-- Main content -->
+<section layout:fragment="content" class="content">
+
+<div class="card">
+
+<div class="input-group mb-3" style="margin-top: 30px">
+
+<div class="input-group-prepend" style="width: 15%;margin-left: 20px">
+<span class="input-group-text" >用户名</span>
+<input id="userid" type="text" class="form-control" aria-label="Username"  aria-describedby="basic-addon1">
+</div>
+
+<select class="selectpicker" id="permission" value="0" placeholder="全部" style="margin-left: 20px">
+<option value="0">全部</option>
+<option value="1">1级</option>
+<option value="2">2级</option>
+</select>
+
+<button type="button" class="btn btn-lg btn-primary" style="padding-top: 2px; padding-bottom: 2px;margin-left: 3px" onclick="reloadTable()">搜索</button>
+</div>
+<div>
+<button type="button" class="btn btn-lg btn-primary" style="padding-top: 2px; padding-bottom: 2px;margin-left: 20px; width: 10%;" onclick="AddUser()">添加用户</button>
+</div>
+
+<div >
+<table id="example1"   style="width:100%">
+<thead>
+<tr >
+<!--<th>#</th>-->
+<th>用户</th>
+<th>权限</th>
+<th>审核状态</th>
+
+<th>操作</th>
+</tr>
+</thead>
+
+</table>
+</div>
+
+
+<!-- /.card-body -->
+</div>
+
+  <div th:insert="Fragment/UserModal::#delcfmModel"></div>
+  <div th:insert="Fragment/UserModal::#Modal_add"></div>
+  <div th:insert="Fragment/UserModal::#Modal_edit"></div>
+<!-- /.card -->
+</section>
+
+
+</html>

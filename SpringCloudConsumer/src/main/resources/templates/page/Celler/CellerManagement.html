@@ -1,0 +1,113 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorator="layout/Main">
+<head>
+
+        <script th:src="@{/js/jquery.min.js}"></script>
+
+        <script type="text/javascript" th:src="@{/js/jQuery-3.4.1.js}"></script>
+        <link rel="stylesheet" th:href="@{https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css}">
+        <link rel="stylesheet" th:href="@{/datapicker/css/bootstrap-datepicker3.min.css}"></link>
+        <link rel="stylesheet" th:href="@{/datatable/css/datatables.css}">
+        <link rel="stylesheet" th:href="@{/css/jquery-ui.css}">
+
+
+
+        <script th:src="@{/datapicker/js/bootstrap-datepicker.js}"></script>
+        <script th:src="@{/datapicker/js/bootstrap-datepicker.zh-CN.min.js}"></script>
+        <script th:src="@{/js/jquery-ui.min.js}"></script>
+        <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+        <script th:src="@{/js/adminlte.min.js}"></script>
+        <script th:src="@{/js/demo.js}"></script>
+
+
+
+        <script type="text/javascript" th:src="@{/datatable/js/jquery.dataTables.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+        <script type="text/javascript" th:src="@{/datatable/js/dataTables.bootstrap.min.js}"></script>
+        <script type="text/javascript" th:src="@{/datatable/js/dataTables.bootstrap4.min.js}"></script>
+
+        <script th:src="@{/js/page/Celler.js}"></script>
+
+
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+</head>
+
+
+        <section layout:fragment="content" class="content">
+
+        <div class="card" >
+
+        <form name="search" class="wu-toolbar-search">
+
+
+        <div class="input-group mb-3" style="margin-top: 30px">
+
+        <div style="margin-left:20px">
+        <div class="input-group input-daterange">
+        <input id="WHC_PayDate" name="WHC_PayDate" type="text" placeholder="入窖日期(起)" data-date-format="yyyy-mm-dd" class="form-control"/>
+        <div class="input-group-addon">~</div>
+        <input id="WHC_PayDate2" name="WHC_PayDate" type="text" placeholder="出窖日期(止)" data-date-format="yyyy-mm-dd" class="form-control"/>
+        </div>
+        </div>
+
+
+        <div class="input-group-prepend" style="width: 15%;margin-left: 3px">
+        <span class="input-group-text" >组号</span>
+        <input id="groupid" type="text" class="form-control" aria-label="Username"  aria-describedby="basic-addon1">
+        </div>
+
+
+        <div class="input-group-prepend" style="width: 15%;margin-left: 3px">
+        <span class="input-group-text" >周期</span>
+        <input id="period" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+
+        <div class="input-group-prepend" style="width: 15%;margin-left: 3px">
+        <span class="input-group-text" >罐号</span>
+        <input id="jarid" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <button type="button" class="btn btn-lg btn-primary" style="padding-top: 2px; padding-bottom: 2px;margin-left: 3px" onclick="reloadTable()">搜索</button>
+        </div>
+
+        </form>
+
+        <div>
+        <button type="button" class="btn btn-lg btn-primary" style="padding-top: 2px; padding-bottom: 2px;margin-left: 20px; width: 10%;" onclick="AddCeller()">添加数据</button>
+        </div>
+
+
+        <div >
+        <table id="example1"   style="width:100%">
+        <thead>
+        <tr >
+        <!--<th>#</th>-->
+        <th>时间</th>
+        <th>入窖时间</th>
+        <th>出窖时间</th>
+        <th>周期</th>
+        <th>组号</th>
+        <th>罐号</th>
+        <th>操作</th>
+        </tr>
+        </thead>
+
+        </table>
+        </div>
+
+
+        <!-- /.card-body -->
+        </div>
+
+                <div th:insert="Fragment/CellerModal::#delcfmModel"></div>
+                <div th:insert="Fragment/CellerModal::#Modal_add"></div>
+                <div th:insert="Fragment/CellerModal::#Modal_edit"></div>
+
+
+        <!-- /.card -->
+        </section>
+
+
+</html>

@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false #是否向eureka中心注册自己
+    fetch-registry: true   #表示自己为注册中心
+    service-url: #监控页面
+      defaultZone: http://${eureka.instance.hostname}:7001/eureka/
+
+spring:
+  application:
+    name: feign-consumer
+  main:
+    allow-bean-definition-overriding: true
